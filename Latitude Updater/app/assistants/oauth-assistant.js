@@ -76,7 +76,7 @@ OauthAssistant.prototype.requestGrant = function() {
 	
 	var url = this.authorizeUrl + '?client_id=' + this.client_id + '&redirect_uri=' + this.redirect_uri + '&response_type=' + this.response_type;
 	if(scope != '') url = url + '&scope=' + scope;
-	Mojo.Log.info(this.TAG, 'requestGrant '+url);
+	Mojo.Log.info(this.TAG, 'requestGrant opening'+url);
 	this.controller.get('browser').mojo.openURL(url);
 };
 

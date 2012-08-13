@@ -161,8 +161,8 @@ FirstAssistant.prototype.authorizeApp = function(event)
     var oauthConfig = {
 		callbackScene:'oauth-done', //Name of the assistant to be called on the OAuth Success
 		authorizeUrl:'https://accounts.google.com/o/oauth2/auth',
-		accessTokenUrl:'https://www.googleapis.com/oauth2/v1/userinfo',
-		accessTokenMethod:'GET', // Optional - 'GET' by default if not specified
+		accessTokenUrl:'https://accounts.google.com/o/oauth2/token',
+		accessTokenMethod:'POST', // Optional - 'GET' by default if not specified
 		client_id: consumer_key(),
 		client_secret: consumer_key_secret(),
 		redirect_uri:'http://www.google.com/oauth2callback', // Optional - 'oob' by default if not specified
