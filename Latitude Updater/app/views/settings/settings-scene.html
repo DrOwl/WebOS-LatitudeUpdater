@@ -1,0 +1,97 @@
+<!--
+ * Copyright 2010 Christoph Laesche. All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, are
+ * permitted provided that the following conditions are met:
+ *
+ *    1. Redistributions of source code must retain the above copyright notice, this list of
+ *       conditions and the following disclaimer.
+ *    2. Redistributions in binary form must reproduce the above copyright notice, this list
+ *       of conditions and the following disclaimer in the documentation and/or other materials
+ *       provided with the distribution.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<div class="palm-page-header multi-line">
+    <div class="palm-page-header-wrapper">
+    	<div class="icon" style="background-image: url(images/icon.png);">
+	    </div>
+        <div class="title" x-mojo-loc=''>
+            <span id="header">Preferences</span>
+        </div>
+    </div>
+</div>
+<div class="palm-body-text" id="intro" style="font-size: 17px; text-align: justify; padding-top: 3px; padding-bottom: 4px;">
+	Refer to the <a href="http://webos.laesche.net/manuals/latitude.html">manual</a> for a detailed description of the parameters.
+</div>
+<div class="palm-group">
+    <div class="palm-group-title">
+        <span x-mojo-loc='' id="updateheader">Update Options</span>
+    </div>
+    <div class="palm-list">
+		<div class="palm-row first">
+            <div class="palm-row-wrapper">
+                <div id="notification" x-mojo-element="ListSelector">
+                </div>
+            </div>
+        </div>
+		<div class="palm-row last">
+            <div class="palm-row-wrapper">
+                <div id="retry" x-mojo-element="ListSelector">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="palm-group">
+    <div class="palm-group-title">
+        <span x-mojo-loc='' id="daemonheader">Background Service Options</span>
+    </div>
+    <div class="palm-list">
+        <div class="palm-row first">
+            <div class="palm-row-wrapper">
+                <div id="interval" x-mojo-element="ListSelector">
+                </div>
+            </div>
+        </div>
+		<div class="palm-row last">
+            <div class="palm-row-wrapper">
+                <div id="wakeup" x-mojo-element="ListSelector">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="palm-group">
+    <div class="palm-group-title">
+        <span x-mojo-loc='' id="locationheader">Location Options</span>
+    </div>
+    <div class="palm-list">
+        <div class="palm-row first">
+            <div class="palm-row-wrapper">
+                <div id="accuracy" x-mojo-element="ListSelector">
+                </div>
+            </div>
+        </div>
+        <div class="palm-row">
+            <div class="palm-row-wrapper">
+                <div id="responseTime" x-mojo-element="ListSelector">
+                </div>
+            </div>
+        </div>
+		<div class="palm-row last">
+            <div class="palm-row-wrapper">
+                <div id="maxAge" x-mojo-element="ListSelector">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

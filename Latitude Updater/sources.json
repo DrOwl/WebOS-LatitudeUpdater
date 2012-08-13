@@ -1,0 +1,28 @@
+[
+    {"source": "app/assistants/sha1.js"},
+    {"source": "app/assistants/oauth.js"},
+    {"source": "app/assistants/stage-assistant.js"},
+    {"source": "app/assistants/app-assistant.js"},
+    {"source": "app/assistants/alert-assistant.js"},
+	{"source": "app/assistants/common.js"},
+    {
+        "scenes": "first",
+        "source": "app/assistants/first-assistant.js"
+    },
+    {
+        "scenes": "oauth-done",
+        "source": "app/assistants/oauth-done-assistant.js"
+    },
+    {
+        "scenes": "oauth",
+        "source": "app/assistants/oauth-assistant.js"
+    },
+    {
+        "scenes": "settings",
+        "source": "app/assistants/settings-assistant.js"
+    },
+    {
+        "scenes": "about",
+        "source": "app/assistants/about-assistant.js"
+    }
+]

@@ -1,0 +1,96 @@
+<!--
+* Copyright 2010 Christoph Laesche. All rights reserved.
+*
+* Redistribution and use in source and binary forms, with or without modification, are
+* permitted provided that the following conditions are met:
+*
+*    1. Redistributions of source code must retain the above copyright notice, this list of
+*       conditions and the following disclaimer.
+*    2. Redistributions in binary form must reproduce the above copyright notice, this list
+*       of conditions and the following disclaimer in the documentation and/or other materials
+*       provided with the distribution.
+*
+* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ``AS IS'' AND ANY EXPRESS OR IMPLIED
+* WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+* FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+* CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+* CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+* ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+* NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+* ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<div class="palm-hasheader">
+    <div class="palm-header">
+        Latitude Updater
+    </div>
+</div>
+<div class="palm-header-spacer">
+</div>
+<table class="palm-list-section-label">
+    <tr>
+        <td class="left">
+        </td>
+        <td class="label" id="latitudelabel">
+            Latitude
+        </td>
+        <td class="right">
+        </td>
+    </tr>
+</table>
+<div id="LatitudeButton" name="Latitude" x-mojo-element="Button">
+</div>
+<table class="palm-list-section-label">
+    <tr>
+        <td class="left">
+        </td>
+        <td class="label" id="statuslabel">
+            Status
+        </td>
+        <td class="right">
+        </td>
+    </tr>
+</table>
+<div class="palm-body-text" id="status">
+    Your position has not yet been updated.
+</div>
+<div class="palm-body-text" id="error" style="display: none;">
+</div>
+<div id="UpdateButton" name="Update" x-mojo-element="Button">
+</div>
+<table class="palm-list-section-label">
+    <tr>
+        <td class="left">
+        </td>
+        <td class="label" id="backgroundlabel">
+            Background process
+        </td>
+        <td class="right">
+        </td>
+    </tr>
+</table>
+<div class="palm-body-text" id="servicestatus">
+Service might not be running.
+</div>
+<table class="twobuttons">
+	<tr>
+		<td><div id="BackButton" name="Background" x-mojo-element="Button"></div></td>
+		<td><div id="StopButton" name="Background" x-mojo-element="Button"></div></td>
+	</tr>
+</table>	
+<table class="palm-list-section-label">
+    <tr>
+        <td class="left">
+        </td>
+        <td class="label" id="authlabel">
+            Authorization
+        </td>
+        <td class="right">
+        </td>
+    </tr>
+</table>
+<div class="palm-body-text" id="auth">
+    Your are not authorized. Please click the button below.
+</div>
+<div id="AuthorizeButton" name="Authorize" x-mojo-element="Button">
+</div>

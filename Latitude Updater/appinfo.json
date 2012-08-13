@@ -1,0 +1,10 @@
+{
+	"id": "net.laesche.latitudeupdater",
+	"version": "0.7.0",
+	"vendor": "Laesche.net",
+	"type": "web",
+	"main": "index.html",
+	"title": "Latitude Updater",
+	"icon": "icon.png",
+	"noWindow": "true"
+}

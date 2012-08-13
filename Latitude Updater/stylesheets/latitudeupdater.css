@@ -1,0 +1,24 @@
+table.twobuttons, table.twobuttons td, table.twobuttons td div
+{
+	margin: 0px;
+	padding: 0px;
+	border-spacing: 0px;
+}
+table.twobuttons td div
+{
+	margin-left: 3px;
+	margin-right: 3px;
+}
+table.twobuttons
+{
+	width: 100%;
+}
+table.twobuttons td
+{
+	width: 50%;
+}
+.palm-body-text
+{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
