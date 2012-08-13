@@ -159,26 +159,34 @@ FirstAssistant.prototype.handleUpdate = function(event)
 FirstAssistant.prototype.authorizeApp = function(event)
 {
     var oauthConfig = {
-        callbackScene: 'oauth-done', //Name of the assistant to be called on the OAuth Success
-        requestTokenUrl: 'https://www.google.com/accounts/OAuthGetRequestToken',
-        requestTokenMethod: 'GET', // Optional - 'GET' by default if not specified
-        authorizeUrl: 'https://accounts.google.com/OAuthAuthorizeToken',
-        //  authorizeUrl: 'https://www.google.com/latitude/apps/OAuthAuthorizeToken',
-        //  authorizeUrl: 'https://www.google.com/accounts/OAuthAuthorizeToken',
-        accessTokenUrl: 'https://www.google.com/accounts/OAuthGetAccessToken',
-        accessTokenMethod: 'GET', // Optional - 'GET' by default if not specified
-        consumer_key: consumer_key(),
-        consumer_key_secret: consumer_key_secret(),
-        callback: 'http://webos.laesche.net', // Optional - 'oob' by default if not specified
-        requestParams: {
-            scope: "https://www.googleapis.com/auth/latitude",
-        },
-        authorizeParams: {
-            domain: "webos.laesche.net",
-            location: "current",
-            granularity: "best",
-            btmpl: "mobile"
-        }
+		callbackScene:'oauth-done', //Name of the assistant to be called on the OAuth Success
+		authorizeUrl:'https://accounts.google.com/o/oauth2/auth',
+		accessTokenUrl:'https://www.googleapis.com/oauth2/v1/userinfo',
+		accessTokenMethod:'GET', // Optional - 'GET' by default if not specified
+		client_id: consumer_key(),
+		client_secret: consumer_key_secret(),
+		redirect_uri:'http://www.google.com/oauth2callback', // Optional - 'oob' by default if not specified
+        response_type:'code', // now only support code
+        scope: ['https://www.googleapis.com/auth/latitude.current.best']
+        
+//        callbackScene: 'oauth-done', //Name of the assistant to be called on the OAuth Success
+//        requestTokenUrl: 'https://www.google.com/accounts/OAuthGetRequestToken',
+//        requestTokenMethod: 'GET', // Optional - 'GET' by default if not specified
+//        authorizeUrl: 'https://accounts.google.com/OAuthAuthorizeToken',
+//        accessTokenUrl: 'https://www.google.com/accounts/OAuthGetAccessToken',
+//        accessTokenMethod: 'GET', // Optional - 'GET' by default if not specified
+//        consumer_key: consumer_key(),
+//        consumer_key_secret: consumer_key_secret(),
+//        callback: 'http://webos.laesche.net', // Optional - 'oob' by default if not specified
+//        requestParams: {
+//            scope: "https://www.googleapis.com/auth/latitude.current.best",
+//        },
+//        authorizeParams: {
+//            domain: "webos.laesche.net",
+//            location: "current",
+//            granularity: "best",
+//            btmpl: "mobile"
+//        }
     };
     Mojo.Controller.stageController.pushScene('oauth', oauthConfig);
 }

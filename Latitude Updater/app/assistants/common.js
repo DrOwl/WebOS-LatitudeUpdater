@@ -45,12 +45,12 @@ function donate_url()
 
 function consumer_key()
 {
-	return 'webos.laesche.net';
+	return '897188257711.apps.googleusercontent.com';
 }
 
 function consumer_key_secret()
 {
-	return 'rdjga91H/CpVBEWGlaf1ncoE';
+	return 'POzq5G47yQi5h0sOe2WmOTP_';
 }
 
 function latitude_page()
