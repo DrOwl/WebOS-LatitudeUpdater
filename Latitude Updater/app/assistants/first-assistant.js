@@ -162,7 +162,8 @@ FirstAssistant.prototype.authorizeApp = function(event)
         callbackScene: 'oauth-done', //Name of the assistant to be called on the OAuth Success
         requestTokenUrl: 'https://www.google.com/accounts/OAuthGetRequestToken',
         requestTokenMethod: 'GET', // Optional - 'GET' by default if not specified
-        authorizeUrl: 'https://www.google.com/latitude/apps/OAuthAuthorizeToken',
+        authorizeUrl: 'https://accounts.google.com/OAuthAuthorizeToken',
+        //  authorizeUrl: 'https://www.google.com/latitude/apps/OAuthAuthorizeToken',
         //  authorizeUrl: 'https://www.google.com/accounts/OAuthAuthorizeToken',
         accessTokenUrl: 'https://www.google.com/accounts/OAuthGetAccessToken',
         accessTokenMethod: 'GET', // Optional - 'GET' by default if not specified
