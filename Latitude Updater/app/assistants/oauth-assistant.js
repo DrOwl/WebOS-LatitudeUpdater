@@ -101,7 +101,7 @@ OauthAssistant.prototype.codeToken = function(code) {
 			postBody = postBody + '&' + name + '=' + postParams[name];
 		}
 	}
-	Mojo.Log.info(this.TAG, 'posting ' + postBody);
+	Mojo.Log.info(this.TAG, 'posting to get token' + postBody);
 	new Ajax.Request(this.url, {
 		method: this.method,
 		encoding: 'UTF-8',
@@ -216,9 +216,10 @@ OauthAssistant.prototype.activate = function(event) {
 }
 
 OauthAssistant.prototype.deactivate = function(event) {
-
+	Mojo.Log.info(this.TAG, 'running deactivate');
 }
 OauthAssistant.prototype.cleanup = function(event) {
+	Mojo.Log.info(this.TAG, 'running cleanup');
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewLoadProgress, this.loadProgress);
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewLoadStarted, this.loadStarted);
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewLoadStopped, this.loadStopped);

@@ -43,6 +43,7 @@ OauthDoneAssistant.prototype.setup = function()
 	this.controller.get("header").update($L("Authorization"));
     try 
     {
+		Mojo.Log.info(this.TAG, 'starting');
         if (this.response.indexOf('GET') == -1) 
         {
             var part = this.response.split("&");
