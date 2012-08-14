@@ -39,6 +39,7 @@ OauthDoneAssistant.prototype.setup = function()
     
     /* add event handlers to listen to events from widgets */
     //this.controller.get("hallo").update("You are authorized." + this.response);
+    	Mojo.Log.info(this.TAG, 'TEST running SETUP');
 	this.controller.get("status").update($L("Your authorization was successful."));
 	this.controller.get("header").update($L("Authorization"));
     try 
@@ -86,6 +87,7 @@ OauthDoneAssistant.prototype.activate = function(event)
 {
     /* put in event handlers here that should only be in effect when this scene is active. For
      example, key handlers that are observing the document */
+     	Mojo.Log.info(this.TAG, 'TEST running activate');
 };
 
 OauthDoneAssistant.prototype.deactivate = function(event)

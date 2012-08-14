@@ -216,10 +216,10 @@ OauthAssistant.prototype.activate = function(event) {
 }
 
 OauthAssistant.prototype.deactivate = function(event) {
-	Mojo.Log.info(this.TAG, 'running deactivate');
+	Mojo.Log.info(this.TAG, 'TEST running deactivate');
 }
 OauthAssistant.prototype.cleanup = function(event) {
-	Mojo.Log.info(this.TAG, 'running cleanup');
+	Mojo.Log.info(this.TAG, 'TEST running cleanup');
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewLoadProgress, this.loadProgress);
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewLoadStarted, this.loadStarted);
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewLoadStopped, this.loadStopped);
