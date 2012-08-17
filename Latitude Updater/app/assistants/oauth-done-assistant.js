@@ -45,14 +45,15 @@ OauthDoneAssistant.prototype.setup = function()
     try 
     {
 		Mojo.Log.info(this.TAG, 'starting');
-        if (this.response.indexOf('GET') == -1) 
+        if (this.response.indexOf('access_token') == -1) 
         {
-            var part = this.response.split("&");
-            var token = OAuth.decodePercent(part[0].replace("oauth_token=", ""));
-            var tokenSecret = OAuth.decodePercent(part[1].replace("oauth_token_secret=", ""));
+            var part = this.response.split(",");
+            var token_section = part.split(":");
+            var token = OAuth.decodePercent(token_section[1].replace("\"", ""));
+            // var tokenSecret = OAuth.decodePercent(part[1].replace("oauth_token_secret=", ""));
             var obj = {
                 token: token,
-                tokenSecret: tokenSecret
+             //   tokenSecret: tokenSecret
             };
             var authCookie = new Mojo.Model.Cookie('latitudetoken');
             authCookie.put(obj);
@@ -64,6 +65,8 @@ OauthDoneAssistant.prototype.setup = function()
     catch (e) 
     {
     }
+
+    	Mojo.Log.info(this.TAG, 'TEST after try in done ass');
     this.buttonAttributes = {};
     this.buttonModel = {
         "label": $L("OK"),

@@ -219,11 +219,46 @@ OauthAssistant.prototype.deactivate = function(event) {
 	Mojo.Log.info(this.TAG, 'TEST running deactivate');
 }
 OauthAssistant.prototype.cleanup = function(event) {
-	Mojo.Log.info(this.TAG, 'TEST running cleanup');
+	Mojo.Log.info(this.TAG, 'TEST running cleanup 7');
+	try {
+	Mojo.Log.info(this.TAG, 'TEST start loadProgress');
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewLoadProgress, this.loadProgress);
+	}
+	catch(e) {
+		Mojo.Log.info(this.TAG, 'TEST loadProgress');
+                Mojo.Log.logException(e, e.description);
+        }
+	try {
+	Mojo.Log.info(this.TAG, 'TEST start loadStarted');
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewLoadStarted, this.loadStarted);
+	}
+	catch(e) {
+		Mojo.Log.info(this.TAG, 'TEST loadStarted failed');
+                Mojo.Log.logException(e, e.description);
+        }
+	try {
+	Mojo.Log.info(this.TAG, 'TEST start loadStopped');
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewLoadStopped, this.loadStopped);
+	}
+	catch(e) {
+		Mojo.Log.info(this.TAG, 'TEST loadStopped failed');
+                Mojo.Log.logException(e, e.description);
+        }
+	try {
+	Mojo.Log.info(this.TAG, 'TEST start loadStopped');
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewLoadFailed, this.loadStopped);
+	}
+	catch(e) {
+		Mojo.Log.info(this.TAG, 'TEST loadStopped failed');
+                Mojo.Log.logException(e, e.description);
+        }
+	try {
+	Mojo.Log.info(this.TAG, 'TEST start titleChanged');
 	Mojo.Event.stopListening(this.controller.get('browser'), Mojo.Event.webViewTitleUrlChanged, this.titleChanged);
+	}
+	catch(e) {
+		Mojo.Log.info(this.TAG, 'TEST titleChanged failed');
+                Mojo.Log.logException(e, e.description);
+        }
 }
 
