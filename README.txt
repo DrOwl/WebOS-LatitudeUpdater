@@ -11,6 +11,8 @@ Google have made some changes to there URL's and API'
 This is an attempt to update the app to make it work again
 
 
+I have tried to intergrate webOS-OAuth2 https://github.com/ioNull/webOS-OAuth2 as a replacment to the original webOS-OAuth https://github.com/fillito/WebOS-OAuth used in this app.
+
 
 ==========================================================================
 From the original site:
